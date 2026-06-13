@@ -1,0 +1,107 @@
+{
+  "info": {
+    "name": "Fuel Route Optimizer",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{base_url}}/api/v1/health/"
+      }
+    },
+    {
+      "name": "Optimize Route Fort Worth to Nashville",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"start\": \"Fort Worth, TX\",\n  \"destination\": \"Nashville, TN\",\n  \"include_geometry\": true\n}"
+        },
+        "url": "{{base_url}}/api/v1/routes/optimize/"
+      }
+    },
+    {
+      "name": "Optimize Route Chicago to Minneapolis",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"start\": \"Chicago, IL\",\n  \"destination\": \"Minneapolis, MN\",\n  \"include_geometry\": true\n}"
+        },
+        "url": "{{base_url}}/api/v1/routes/optimize/"
+      }
+    },
+    {
+      "name": "Optimize Route Chicago to New York (4 stops)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"start\": \"Chicago, IL\",\n  \"destination\": \"New York, NY\",\n  \"include_geometry\": true\n}"
+        },
+        "url": "{{base_url}}/api/v1/routes/optimize/"
+      }
+    },
+    {
+      "name": "Optimize Route Fort Worth to New York (5 stops)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"start\": \"Fort Worth, TX\",\n  \"destination\": \"New York, NY\",\n  \"include_geometry\": true\n}"
+        },
+        "url": "{{base_url}}/api/v1/routes/optimize/"
+      }
+    },
+    {
+      "name": "Optimize Route Denver to New York (8 stops)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"start\": \"Denver, CO\",\n  \"destination\": \"New York, NY\",\n  \"include_geometry\": true\n}"
+        },
+        "url": "{{base_url}}/api/v1/routes/optimize/"
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://127.0.0.1:8000"
+    }
+  ]
+}
